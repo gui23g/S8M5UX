@@ -1,4 +1,3 @@
-// Configuração inicial da visualização com zoom
 function setupViewport() {
     const container = d3.select("body")
         .append("div")
@@ -32,8 +31,7 @@ function setupViewport() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const viewport = setupViewport();
-    
-    // Carrega o SVG e as posições em paralelo
+
     Promise.all([
         d3.xml("assets/monstro.svg"),
         d3.json("src/posicoes.json")
